@@ -10,7 +10,7 @@ var express = require('express');
 // Set up the Express App & create the required instance of Express to act as the HTTP server for this application.
 var app = express();
 // Define localhost PORT we want to listen to
-var PORT = process.env.PORT || 3000;
+var PORT = process.env.PORT || 8080;
 
 //Set up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
