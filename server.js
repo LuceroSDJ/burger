@@ -12,11 +12,15 @@ var app = express();
 // Define localhost PORT we want to listen to
 var PORT = process.env.PORT || 8080;
 
+// Serve static content for the app from the "public" directory in the application directory.
+app.use(express.static("public"));
+
 //Set up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // routes
+
 
 
 

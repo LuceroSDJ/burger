@@ -1,6 +1,6 @@
 -- INSTRUCTIONS:
 -- In this file, write insert queries to populate the burgers table with at least three entries.
 
-INSERT INTO burgers(devoured, burger_name) VALUES (0, buffalo chicken burger);
-INSERT INTO burgers(devoured, burger_name) VALUES (0, chicken tikka burger);
-INSERT INTO burgers(devoured, burger_name) VALUES (0, takis fuego beef burger);
+INSERT INTO burgers (burger_name) VALUES ("buffalo chicken burger");
+INSERT INTO burgers (burger_name) VALUES ("chicken tikka burger");
+INSERT INTO burgers (burger_name) VALUES ("takis fuego beef burger");
