@@ -13,6 +13,18 @@ var connection = require("../config/connection.js");
 */
 
 // ======= class sctivity ========
+// Helper function for SQL syntax.
+// ["?", "?", "?"].toString() => "?,?,?";
+function printQuestionMarks(num) {
+    var arr = [];
+  
+    for (var i = 0; i < num; i++) {
+      arr.push("?");
+    }
+  
+    return arr.toString();
+}
+
 // Helper function to convert object key/value pairs to SQL syntax
 function objToSql(ob) {
     var arr = [];
@@ -35,12 +47,13 @@ function objToSql(ob) {
     // translate array of strings to a single comma-separated string
     return arr.toString();
   }
-    
+
+// Object for all our SQL statement functions.
 // ================== selectAll() / SELECT * FROM `burgers` =========================
 var orm = {
     selectAll: function(tableName, callback) {
         var queryString = "SELECT * FROM  " + tableName + ";";
-        console.log(queryString);
+        console.log("selectAll() for all our SQL statement functions created in orm.js: " + queryString);
         connection.query(queryString, function(err, result) {
             if (err) throw err;
             console.log(result);
@@ -55,9 +68,10 @@ var orm = {
         queryString += "(";
         queryString += column.toString();
         queryString += ") ";
-        queryString += "VALUES (?)"; // add burger name
+        queryString += printQuestionMarks(vals.length);
+        queryString +=") ";
     
-        console.log(queryString);
+        console.log("insertOne() for all our SQL statement functions created in orm.js: " + queryString);
         connection.query(queryString, valOfCol, function(err, result) {
             if (err) throw err;
             console.log(result);
@@ -73,7 +87,7 @@ var orm = {
         queryString += " WHERE ";
         queryString += condition; 
 
-        console.log(queryString);
+        console.log("updateOne() for all our SQL statement functions created in orm.js: " + queryString);
         connection.query(queryString, function(err, result) {
             if (err) throw err;
             console.log(result);
