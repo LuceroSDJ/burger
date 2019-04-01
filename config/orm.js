@@ -69,7 +69,7 @@ var orm = {
         queryString += column.toString();
         queryString += ") ";
         queryString += "VALUES ("
-        queryString += printQuestionMarks(vals.length);
+        queryString += printQuestionMarks(valOfCol.length);
         queryString +=") ";
     
         console.log("insertOne() for all our SQL statement functions created in orm.js: " + queryString);
@@ -83,7 +83,7 @@ var orm = {
 // =================   updateOne() / UPDATE `burgers` SET devoured = 1 (BOOLEAN/TRUE) =====================
     updateOne: function(tableName, objColVals, condition, callback) {
         var queryString = "UPDATE " + tableName;
-        queryString += "SET ";
+        queryString += " SET ";
         queryString += objToSql(objColVals);
         queryString += " WHERE ";
         queryString += condition; 

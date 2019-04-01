@@ -48,7 +48,7 @@ router.put("/api/burgers/:id", function(req, res) {
     console.log("condition", condition);
 
     burger.updateOne({
-        devoured: req.body.true  //devoured must be updated to true
+        devoured: req.body.devoured  //devoured must be updated to true
     }, condition, function(result) {
         if(result.changedRows == 0) {
             return res.status(404).end();

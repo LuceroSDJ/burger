@@ -2,9 +2,10 @@
     <!-- image & title --> 
     <div class="row">
         <div class="col-md-12 text-center">
-            <img src="assets/images/burger1.gif">
+            <img src="assets/images/burger8.gif">
             {{!-- <img src="assets/images/burger2.gif"> --}}
-            <h1>Burger Shack</h1>
+            <h1 class="text-white">🍴 Fuego Burger House 🍴</h1>
+            <br>
         </div>
     </div>
 </div>
@@ -18,7 +19,7 @@
             <div class="form-group mx-sm-3 mb-2">
                 <input id="orderBurgerInput" class="form-control form-control-lg" type="text" placeholder="Order your Burger!">  
             </div>
-            <button id="submit" type="submit" class="btn btn-primary mb-2">Cook my burger!</button>
+            <button id="submit" type="submit" class="btn btn-primary mb-2"><h4>Place Order 💰</h4></button>
         </form>
     </div>
     <div class="col"></div>
@@ -28,30 +29,33 @@
 <!-- 2(row col-6) display added & deleted burgers on oposite sides of the viewport -->
 
 <div class="container">
+    {{!-- <div class="row justify-content-around"> --}}
     <div class="row">
-        <div class="col">
+        <div class="col"  id="basket">
             <form class="form-inline">  
                 {{#each burgers}}
                     {{#unless this.devoured}}
                     <div class="form-group mx-sm-3 mb-2">
-                        <label id="orderBurgerInput" class="form-control form-control-lg" type="text" placeholder="Order your Burger!">{{this.id}}. {{this.burger_name}}</label>  
+                        <label id="availableBurger" class="form-control form-control-lg" type="text" placeholder="Order your Burger!">{{this.id}}. {{this.burger_name}} 🍔</label>  
                     </div>
-                    <button id="submit" type="submit" class="btn btn-primary mb-2">Devour it!</button>
+                    <button  data-id="{{id}}" data-newdevour="true" id="updateBoolean" type="submit" class="btn btn-primary mb-2">Devour it!</button>
                     {{/unless}}
                 {{/each}}  
             </form>
         </div> <!-- column 1 of 2 ends -->
-
-        <div class="col">
-            2 of 2
+        
+        <div class="col" id="trash">
              {{#each burgers}}
 				{{#if this.devoured}}
-                <p>{{this.id}}. {{this.burger_name}}</p>
+                <div class="form-group mx-sm-3 mb-2">
+                    <label id="devouredBurger" class="form-control form-control-lg" type="text" placeholder="Order your Burger!">{{this.id}}. {{this.burger_name}}</label>  
+                </div>
                 {{/if}}
             {{/each}}
         </div>
         </div>
     </div>
+    {{!-- </div> --}}
 </div>
 
 {{!-- Create handlebars paths by creating a {{ variable }} within a HTML tag
