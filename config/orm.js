@@ -68,6 +68,7 @@ var orm = {
         queryString += "(";
         queryString += column.toString();
         queryString += ") ";
+        queryString += "VALUES ("
         queryString += printQuestionMarks(vals.length);
         queryString +=") ";
     

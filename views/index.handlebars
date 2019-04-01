@@ -23,16 +23,32 @@
     </div>
     <div class="col"></div>
 </div>
+<br><br>
 
 <!-- 2(row col-6) display added & deleted burgers on oposite sides of the viewport -->
 
 <div class="container">
     <div class="row">
         <div class="col">
-            1 of 2
-        </div>
+            <form class="form-inline">  
+                {{#each burgers}}
+                    {{#unless this.devoured}}
+                    <div class="form-group mx-sm-3 mb-2">
+                        <label id="orderBurgerInput" class="form-control form-control-lg" type="text" placeholder="Order your Burger!">{{this.id}}. {{this.burger_name}}</label>  
+                    </div>
+                    <button id="submit" type="submit" class="btn btn-primary mb-2">Devour it!</button>
+                    {{/unless}}
+                {{/each}}  
+            </form>
+        </div> <!-- column 1 of 2 ends -->
+
         <div class="col">
             2 of 2
+             {{#each burgers}}
+				{{#if this.devoured}}
+                <p>{{this.id}}. {{this.burger_name}}</p>
+                {{/if}}
+            {{/each}}
         </div>
         </div>
     </div>
@@ -40,3 +56,14 @@
 
 {{!-- Create handlebars paths by creating a {{ variable }} within a HTML tag
 Then, these variable will be replaced with data sent from the backend   --}}
+
+{{!-- test #1 --}}
+{{!-- <form class="form-inline">
+    {{#each burgers}}
+        {{#unless this.devoured}}
+            <div class="input-group-text">{{this.id}}. {{this.burger_name}}</div>
+        <button>devour it!</button>
+        <br><br>
+        {{/unless}}
+    {{/each}}
+</form> --}}
