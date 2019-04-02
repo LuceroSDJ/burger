@@ -4,6 +4,13 @@ This app is  a burger logger with MySQL, Node, Express, Handlebars and a homemad
 * Read
 * Update
 
+## CLOUD PLATFORM
+* HEROKU
+    * [Open this app in HEROKU](https://lychee-sundae-13209.herokuapp.com/)
+
+## APP LINKED TO MY PORTFOLIO
+* [Visit my Profile Page](https://lucerosdj.github.io/Portfolio/)
+
 ## GOAL
 This app's goal is to display existing data (burgers), allow you to add data (place a new order), and update data (devour your burger = true).
 ```
@@ -25,11 +32,4 @@ This app's goal is to display existing data (burgers), allow you to add data (pl
 * Express
 * express-handlebars
 
-### CLOUD PLATFORM
-* HEROKU
-```
-    * [Open this app in HEROKU](https://lychee-sundae-13209.herokuapp.com/)
-```
 
-### APP LINKED TO MY PORTFOLIO
-* [Visit my Profile Page](https://lucerosdj.github.io/Portfolio/)
