@@ -35,6 +35,11 @@ This app's goal is to display existing data (burgers), allow you to input data (
 ### FUNCTIONALITY
 1. `selectAll(...)`
     `→ method that will execute the necessary MySQL commands in controllers to RETRIEVE data from our database.`
+    * MySQL server stores our database and table already populated with three entries.
+    * Then, we retrieve the data to be displayed to the user.
+    ![schemasMySQLcreatetable](https://user-images.githubusercontent.com/44692872/55384227-c628f280-54ef-11e9-9649-a0c7a257b7a8.png)
+    ![selectAllORMmethod](https://user-images.githubusercontent.com/44692872/55384107-6af70000-54ef-11e9-8dec-864a043738f8.png)
+
 
 2. `insertOne(...)`
     `→ method that will execute the necessary MySQL commands in controllers to STORE data from our database.`
