@@ -10,11 +10,11 @@ This app's goal is to display existing data (burgers), allow you to input data (
     This is achieved by using Node and MySQL to query and route data in our app, 
     and Handlebars to generate your HTML.
 ```
-## CLOUD PLATFORM
+## `CLOUD PLATFORM`
 * HEROKU
     * [Open this app in HEROKU](https://lychee-sundae-13209.herokuapp.com/)
 
-## APP LINKED TO MY PORTFOLIO
+## `APP LINKED TO MY PORTFOLIO`
 * [Visit my Profile Page](https://lucerosdj.github.io/Portfolio/)
 
 ### TECHNOLOGIES 
